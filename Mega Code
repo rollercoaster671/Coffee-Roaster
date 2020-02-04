@@ -28,69 +28,69 @@ int ExhaustMaxTemp = 120;
 int LastAlarmSilenceSwitchState = 0;
 int timesilenced = 0;
 
-int ChaffPot = A0;
+#define ChaffPot = A0;
 int ChaffPotValue = 0;
 int ChaffPotOutput = 0;
-int GasCtrlVlv = A1;
+#define GasCtrlVlv = A1;
 int GasCtrlVlvValue = 0;
 
-int ChaffCollector = 3;
+#define ChaffCollector = 3;
 
-int ThermoDOamb =5 ;
-int ThermoCSamb =6;
-int ThermoCLKamb =7;
+#define ThermoDOamb =5 ;
+#define ThermoCSamb =6;
+#define ThermoCLKamb =7;
 
 MAX6675 thermocoupleAmb(ThermoCLKamb, ThermoCSamb, ThermoDOamb);
 
-int ThermoDObean =8;
-int ThermoCSbean =9;
-int ThermoCLKbean =10;
+#define ThermoDObean =8;
+#define ThermoCSbean =9;
+#define ThermoCLKbean =10;
 
-int GasValvePin = 11;
+#define GasValvePin = 11;
 
-int flame_sensor = 12;
+#define flame_sensor = 12;
 
 MAX6675 thermocoupleBean(ThermoCLKbean, ThermoCSbean, ThermoDObean);
 
-int ThermoDOexh =22;
-int ThermoCSexh =23;
-int ThermoCLKexh =24;
+#define ThermoDOexh =22;
+#define ThermoCSexh =23;
+#define ThermoCLKexh =24;
 
 MAX6675 thermocoupleExh(ThermoCLKexh, ThermoCSexh, ThermoDOexh);
 
-int ThermoDOfl = 25;
-int ThermoCSfl =26;
-int ThermoCLKfl =27;
+#define ThermoDOfl = 25;
+#define ThermoCSfl =26;
+#define ThermoCLKfl =27;
 
 MAX6675 thermocoupleFl(ThermoCLKfl, ThermoCSfl, ThermoDOfl);
 
-int GasSolenoid = 28;
+#define GasSolenoid = 28;
 
-int StirDir = 29;
-int StirStep = 30;
+#define StirDir = 29;
+#define StirStep = 30;
 
-int ChargeDumpServo = 32;
+#define ChargeDumpServo = 32;
 
 //Switches
-int GasEnableSwitch = 34;
-int DrumAirSwitch = 36;
-int CoolTraySwitch = 38;
+#define GasEnableSwitch = 34;
+#define DrumAirSwitch = 36;
+#define CoolTraySwitch = 38;
 
 //LEDs
-int FlameOnLED = 39;
-int FlameAlarmLED = 40;
-int FlameArmedLED = 41;
-int DrumAirLED = 47;
-int CoolingTrayLED = 35;
-int AlarmLED = 42;
+#define FlameOnLED = 39;
+#define FlameAlarmLED = 40;
+#define FlameArmedLED = 41;
+#define DrumAirLED = 47;
+#define CoolingTrayLED = 35;
+#define AlarmLED = 42;
 
-int AlarmBuzz = 43;
+#define AlarmBuzz = 43;
 
-int ChargeButton = 44;
+#define ChargeButton = 44;
 
-int EStop = 45;
+#define EStop = 45;
 
-int AlarmSilence = 46;
+#define AlarmSilence = 46;
 
 
 #define motorInterfaceType 1
