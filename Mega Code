@@ -149,7 +149,7 @@ void loop() {
 
 //Chaff Collector Fan Control
 
-  if(DrumAirSwitch == LOW) {
+  if(digitalRead(DrumAirSwitch) == LOW) {
     ChaffPotOutput = map(ChaffPotValue, 0, 1023, 0, 255);
     analogWrite(ChaffCollector, ChaffPotOutput);
     digitalWrite(DrumAirLED, HIGH);
@@ -157,7 +157,7 @@ void loop() {
   //if(thermocoupleExh.readFarenheit()>(ExhaustMaxTemp+50)) {
   //  analogWrite(ChaffCollector, 200);
   //}
-  if(DrumAirSwitch == HIGH) {
+  if(digitalRead(DrumAirSwitch) == HIGH) {
   //  analogWrite(ChaffCollector, 0);
     digitalWrite(DrumAirLED, LOW);
   }
@@ -260,14 +260,14 @@ void loop() {
 
 //Charge Dump-----------------------------------------------------------------
     ChargeDump.write(90);
-    if (ChargeButton == LOW) {
+    if (digitalRead(ChargeButton) == LOW) {
       ChargeDump.write(0);
     }
 //____________________________________________________________________________
 
 //Buzzer----------------------------------------------------------------------
   if(LastAlarmSilenceSwitchState != digitalRead(AlarmSilence)) {
-    if(AlarmSilence == LOW){
+    if(digitalRead(AlarmSilence) == LOW){
       timesilenced = millis();
     }
   }
